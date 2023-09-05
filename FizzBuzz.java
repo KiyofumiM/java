@@ -1,12 +1,11 @@
 public class FizzBuzz {
     public static void main(String[] args) {
-        int max = Integer.parseInt(args[0]);
-
         // 数値が入力されていない場合の処理
         if (args.length == 0) {
-			return;
-		}
-        
+		return;
+	}
+
+	int max = Integer.parseInt(args[0]);
         String result = null;
         for( int i = 1; i <= max; i++){
             result = "";
