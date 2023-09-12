@@ -27,7 +27,7 @@ private Map<String, String> map = new HashMap<>();
 	}
 	
 	public void delete() {
-        map.clear();
+        	map.clear();
 		System.out.println("deleted all");
 	}
 }
