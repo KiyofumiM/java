@@ -1,19 +1,23 @@
+package exapmle;
+
 import java.util.logging.*;
 
 public class TryCatchFinallySample2 {
 
-private static Logger logger = Logger.getLogger(TryCatchFinallySample2.class.getName());
+	private static Logger logger = Logger.getLogger(TryCatchFinallySample2.class.getName());
 
 	public static void main(String[] args) {
+		System.out.println(args[args.length - 1]);
+		
 		logger.setLevel(Level.ALL);
 
 		try {
-			logger.warning("WARNING");
+			logger.warning("try");
 			Integer.parseInt(args[0]);
 		} catch (Exception e) {
-			logger.severe("SEVERE");
+			logger.severe("catch");
 		} finally {
-			logger.info("INFO");
+			logger.info("finally");
 		}
 	}
 }
