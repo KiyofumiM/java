@@ -1,8 +1,10 @@
+package text_reader;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
-import java.util.logging.*;
+import java.util.logging.Logger;
+
 
 public class TextReader {
 	private String path;
@@ -20,8 +22,7 @@ public class TextReader {
 	private void execute() {
 		List<Integer> valueList = new ObjectList<>();
 
-		try (FileReader fr = new FileReader(path);
-        BufferedReader br = new BufferedReader(fr)) {
+		try (FileReader fr = new FileReader(path); BufferedReader br = new BufferedReader(fr)) {
 			String line = null;
 			while ((line = br.readLine()) != null) {
 				valueList.add(Integer.parseInt(line));
@@ -35,7 +36,7 @@ public class TextReader {
 		}
 	}
 
-	public static void main(String[] args) {
+	public static void main(String... args) {
 		logger.info(Mark.START.name());
 		new TextReader(args[0]).execute();
 		logger.info(Mark.END.name());
