@@ -1,13 +1,12 @@
-package exapmle;
+package text;
 
 import java.util.logging.*;
-
 public class TryCatchFinallySample2 {
 
 	private static Logger logger = Logger.getLogger(TryCatchFinallySample2.class.getName());
 
 	public static void main(String[] args) {
-		System.out.println(args[args.length - 1]);
+		System.out.println(args[0]);
 		
 		logger.setLevel(Level.ALL);
 

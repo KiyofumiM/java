@@ -1,8 +1,8 @@
-package exapmle;
+package text;
 
 public class TryCatchFinallySample {
 	public static void main(String[] args) {
-		System.out.println(args[args.length - 1]);
+		System.out.println(args[0]);
 		
 		try {
 			System.out.println("try");
